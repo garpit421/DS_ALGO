@@ -14,40 +14,19 @@ int main()
 	mid=(f+l)/2;
 	while(f<=l)
 	{
-		//printf("%d %d %d\n",f,l,mid);
-		if(a[mid]==x && (mid==0 || x>a[mid-1]))
-		{
-			
+		if(a[mid]==x){
 			k1=mid;
-			//printf("%d\n",k1);
 			break;
-		}
+		
 		else if(x>a[mid])
 			f=mid+1;
 		else
 			l=mid-1;
 		mid=(f+l)/2;
-	}
-	f=0;
-	l=n-1;
-	mid=(f+l)/2;
-	while(f<=l)
-	{
-		//printf("%d %d %d\n",f,l,mid);
-		if(a[mid]==x && (mid==n-1 || x<a[mid+1]))
-		{
-			
-			k2=mid;
-			//printf("%d",k2);
-			break;
+		
 		}
-		else if(x<a[mid])
-			l=mid-1;
-		else
-			f=mid+1;
-		mid=(f+l)/2;
 	}
-	printf("Ans=%d",k2-k1+1);
+	printf("Ans=%d",k1);
 	return 0;
 }
 
